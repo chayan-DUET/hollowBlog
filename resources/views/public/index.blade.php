@@ -1,358 +1,195 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <title>Flattern - Flat and trendy bootstrap site template</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <meta name="csrf-token" content="{{csrf_token()}}" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{csrf_token()}}" />
+    <title>Topbuilder Construction Template</title>
 
-  <!-- css -->
-  <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700" rel="stylesheet">
-  <link href="{{asset("public/asset/css/")}}/bootstrap.css" rel="stylesheet" />
-  <link href="{{asset("public/asset/css/")}}/bootstrap-responsive.css" rel="stylesheet" />
-  <link href="{{asset("public/asset/css/")}}/fancybox/jquery.fancybox.css" rel="stylesheet">
-  <link href="{{asset("public/asset/css/")}}/jcarousel.css" rel="stylesheet" />
-  <link href="{{asset("public/asset/css/")}}/flexslider.css" rel="stylesheet" />
-  <link href="{{asset("public/asset/css/")}}/style.css" rel="stylesheet" />
-  <!-- Theme skin -->
-  <link href="skins/default.css" rel="stylesheet" />
-  <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
-  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
-  <link rel="shortcut icon" href="ico/favicon.png" />
+    <!-- Favicon -->
+    <link rel="icon" href="{{asset("public/asset/images/")}}/favicon.png" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link href="{{asset("public/asset/css/")}}/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link href="{{asset("public/asset/vendors/")}}/animate/animate.css" rel="stylesheet">
+    <!-- Icon CSS-->
+	<link rel="stylesheet" href="{{asset("public/asset/vendors/")}}/font-awesome/css/font-awesome.min.css">
+    <!-- Camera Slider -->
+    <link rel="stylesheet" href="{{asset("public/asset/vendors/")}}/camera-slider/camera.css">
+    <!-- Owlcarousel CSS-->
+	<link rel="stylesheet" type="text/css" href="{{asset("public/asset/vendors/")}}/owl_carousel/owl.carousel.css" media="all">
 
-  <!-- =======================================================
-    Theme Name: Flattern
-    Theme URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
+    <!--Theme Styles CSS-->
+	<link rel="stylesheet" type="text/css" href="{{asset("public/asset/css/")}}/style.css" media="all" />
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="{{asset("css/app.css")}}"></script>
 </head>
-
 <body>
 <div id="app">
-  <div id="wrapper">
-    <!-- toggle top area -->
-    <div class="hidden-top">
-      <div class="hidden-top-inner container">
-        <div class="row">
-          <div class="span12">
-            <ul>
-              <li><strong>We are available for any custom works this month</strong></li>
-              <li>Main office: Springville center X264, Park Ave S.01</li>
-              <li>Call us <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end toggle top area -->
-    <!-- start header -->
-    <header>
-      <div class="container ">
-        <!-- hidden top area toggle link -->
-        <div id="header-hidden-link">
-          <a href="#" class="toggle-link" title="Click me you'll get a surprise" data-target=".hidden-top"><i></i>Open</a>
-        </div>
-        <!-- end toggle link -->
-        <div class="row nomargin">
-          <div class="span12">
-            <div class="headnav">
-              <ul>
-                <li><a href="#mySignup" data-toggle="modal"><i class="icon-user"></i> Sign up</a></li>
-                <li><a href="#mySignin" data-toggle="modal">Sign in</a></li>
-              </ul>
-            </div>
-            <!-- Signup Modal -->
-            <div id="mySignup" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySignupModalLabel" aria-hidden="true">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 id="mySignupModalLabel">Create an <strong>account</strong></h4>
-              </div>
-              <div class="modal-body">
-                <form class="form-horizontal">
-                  <div class="control-group">
-                    <label class="control-label" for="inputEmail">Email</label>
-                    <div class="controls">
-                      <input type="text" id="inputEmail" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <label class="control-label" for="inputSignupPassword">Password</label>
-                    <div class="controls">
-                      <input type="password" id="inputSignupPassword" placeholder="Password">
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <label class="control-label" for="inputSignupPassword2">Confirm Password</label>
-                    <div class="controls">
-                      <input type="password" id="inputSignupPassword2" placeholder="Password">
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <div class="controls">
-                      <button type="submit" class="btn">Sign up</button>
-                    </div>
-                    <p class="aligncenter margintop20">
-                      Already have an account? <a href="#mySignin" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Sign in</a>
-                    </p>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <!-- end signup modal -->
-            <!-- Sign in Modal -->
-            <div id="mySignin" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySigninModalLabel" aria-hidden="true">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 id="mySigninModalLabel">Login to your <strong>account</strong></h4>
-              </div>
-              <div class="modal-body">
-                <form class="form-horizontal">
-                  <div class="control-group">
-                    <label class="control-label" for="inputText">Username</label>
-                    <div class="controls">
-                      <input type="text" id="inputText" placeholder="Username">
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <label class="control-label" for="inputSigninPassword">Password</label>
-                    <div class="controls">
-                      <input type="password" id="inputSigninPassword" placeholder="Password">
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <div class="controls">
-                      <button type="submit" class="btn">Sign in</button>
-                    </div>
-                    <p class="aligncenter margintop20">
-                      Forgot password? <a href="#myReset" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Reset</a>
-                    </p>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <!-- end signin modal -->
-            <!-- Reset Modal -->
-            <div id="myReset" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="myResetModalLabel" aria-hidden="true">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 id="myResetModalLabel">Reset your <strong>password</strong></h4>
-              </div>
-              <div class="modal-body">
-                <form class="form-horizontal">
-                  <div class="control-group">
-                    <label class="control-label" for="inputResetEmail">Email</label>
-                    <div class="controls">
-                      <input type="text" id="inputResetEmail" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <div class="controls">
-                      <button type="submit" class="btn">Reset password</button>
-                    </div>
-                    <p class="aligncenter margintop20">
-                      We will send instructions on how to reset your password to your inbox
-                    </p>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <!-- end reset modal -->
-          </div>
-        </div>
-        <div class="row">
-          <div class="span4">
-            <div class="logo">
-              <a href="index.html"><img src="{{asset("public/asset/img/")}}/logo.png" alt="" class="logo" /></a>
-              <h1>Flat and trendy bootstrap template</h1>
-            </div>
-          </div>
-          <div class="span8">
-            <div class="navbar navbar-static-top">
-              <div class="navigation">
-                <nav>
-                  <ul class="nav topnav">
-                    <li class="dropdown active">
-                      <a href="index.html">Home <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="index-alt2.html">Homepage 2</a></li>
-                        <li><a href="index-alt3.html">Homepage 3</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#">Features <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="typography.html">Typography</a></li>
-                        <li><a href="table.html">Table</a></li>
-                        <li><a href="components.html">Components</a></li>
-                        <li><a href="animations.html">56 Animations</a></li>
-                        <li><a href="icons.html">Icons</a></li>
-                        <li><a href="icon-variations.html">Icon variations</a></li>
-                        <li class="dropdown"><a href="#">3 Sliders <i class="icon-angle-right"></i></a>
-                          <ul class="dropdown-menu sub-menu-level1">
-                            <li><a href="index.html">Nivo slider</a></li>
-                            <li><a href="index-alt2.html">Slit slider</a></li>
-                            <li><a href="index-alt3.html">Parallax slider</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#">Pages <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="pricingbox.html">Pricing boxes</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
-                        <li><a href="404.html">404</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#">Portfolio <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="portfolio-2cols.html">Portfolio 2 columns</a></li>
-                        <li><a href="portfolio-3cols.html">Portfolio 3 columns</a></li>
-                        <li><a href="portfolio-4cols.html">Portfolio 4 columns</a></li>
-                        <li><a href="portfolio-detail.html">Portfolio detail</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <router-link to="/blog">Blog</router-link>
-                    </li>
-                    <li>
-                      <a href="contact.html">Contact </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-              <!-- end navigation -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- end header -->
-    {{--vue routing--}}
-	
-      <home-main></home-main>
-	  
-	  
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="span3">
-            <div class="widget">
-              <h5 class="widgetheading">Browse pages</h5>
-              <ul class="link-list">
-                <li><a href="#">About our company</a></li>
-                <li><a href="#">Our services</a></li>
-                <li><a href="#">Meet our team</a></li>
-                <li><a href="#">Explore our portfolio</a></li>
-                <li><a href="#">Get in touch with us</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="span3">
-            <div class="widget">
-              <h5 class="widgetheading">Important stuff</h5>
-              <ul class="link-list">
-                <li><a href="#">Press release</a></li>
-                <li><a href="#">Terms and conditions</a></li>
-                <li><a href="#">Privacy policy</a></li>
-                <li><a href="#">Career center</a></li>
-                <li><a href="#">Flattern forum</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="span3">
-            <div class="widget">
-              <h5 class="widgetheading">Flickr photostream</h5>
-              <div class="flickr_badge">
-                <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=8&amp;display=random&amp;size=s&amp;layout=x&amp;source=user&amp;user=34178660@N03"></script>
-              </div>
-              <div class="clear">
-              </div>
-            </div>
-          </div>
-          <div class="span3">
-            <div class="widget">
-              <h5 class="widgetheading">Get in touch with us</h5>
-              <address>
-								<strong>Flattern studio, Pte Ltd</strong><br>
-								 Springville center X264, Park Ave S.01<br>
-								 Semarang 16425 Indonesia
-					 		</address>
-              <p>
-                <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891 <br>
-                <i class="icon-envelope-alt"></i> email@domainname.com
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="sub-footer">
-        <div class="container">
-          <div class="row">
-            <div class="span6">
-              <div class="copyright">
-                <p>
-                  <span>&copy; Flattern - All right reserved.</span>
-                </p>
-                <div class="credits">
-                  <!--
-                    All the links in the footer should remain intact.
-                    You can delete the links only if you purchased the pro version.
-                    Licensing information: https://bootstrapmade.com/license/
-                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Flattern
-                  -->
-                  Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                </div>
-              </div>
-            </div>
-            <div class="span6">
-              <ul class="social-network">
-                <li><a href="#" data-placement="bottom" title="Facebook"><i class="icon-facebook icon-square"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Twitter"><i class="icon-twitter icon-square"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Linkedin"><i class="icon-linkedin icon-square"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Pinterest"><i class="icon-pinterest icon-square"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Google plus"><i class="icon-google-plus icon-square"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-  </div>
-  <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-32 active"></i></a>
-   <script src="{{asset("js/app.js")}}"></script>
-  <!-- javascript
-    ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="{{asset("public/asset/js/")}}/jquery.js"></script>
-  <script src="{{asset("public/asset/js/")}}/jquery.easing.1.3.js"></script>
-  <script src="{{asset("public/asset/js/")}}/bootstrap.js"></script>
-  <script src="{{asset("public/asset/js/")}}/jcarousel/jquery.jcarousel.min.js"></script>
-  <script src="{{asset("public/asset/js/")}}/jquery.fancybox.pack.js"></script>
-  <script src="{{asset("public/asset/js/")}}/jquery.fancybox-media.js"></script>
-  <script src="{{asset("public/asset/js/")}}/google-code-prettify/prettify.js"></script>
-  <script src="{{asset("public/asset/js/")}}/portfolio/jquery.quicksand.js"></script>
-  <script src="{{asset("public/asset/js/")}}/portfolio/setting.js"></script>
-  <script src="{{asset("public/asset/js/")}}/jquery.flexslider.js"></script>
-  <script src="{{asset("public/asset/js/")}}/jquery.nivo.slider.js"></script>
-  <script src="{{asset("public/asset/js/")}}/modernizr.custom.js"></script>
-  <script src="{{asset("public/asset/js/")}}/jquery.ba-cond.min.js"></script>
-  <script src="{{asset("public/asset/js/")}}/jquery.slitslider.js"></script>
-  <script src="{{asset("public/asset/js/")}}/animate.js"></script>
+    <!-- Preloader -->
+    <div class="preloader"></div>
 
-  <!-- Template Custom JavaScript File -->
-  <script src="{{asset("public/asset/js/")}}/custom.js"></script>
+	<!-- Top Header_Area -->
+	<section class="top_header_area">
+	    <div class="container">
+            <ul class="nav navbar-nav top_nav">
+                <li><a href="#"><i class="fa fa-phone"></i>+1 (168) 314 5016</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o"></i>info@thethemspro.com</a></li>
+                <li><a href="#"><i class="fa fa-clock-o"></i>Mon - Sat 12:00 - 20:00</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right social_nav">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+	    </div>
+	</section>
+	<!-- End Top Header_Area -->
+
+	<!-- Header_Area -->
+    <nav class="navbar navbar-default header_aera" id="main_navbar">
+        <div class="container">
+            <!-- searchForm -->
+            <div class="searchForm">
+                <form action="#" class="row m0">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input type="search" name="search" class="form-control" placeholder="Type & Hit Enter">
+                        <span class="input-group-addon form_hide"><i class="fa fa-times"></i></span>
+                    </div>
+                </form>
+            </div><!-- End searchForm -->
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="col-md-2 p0">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#min_navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="{{asset("public/asset/images/")}}/logo.png" alt=""></a>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="col-md-10 p0">
+                <div class="collapse navbar-collapse" id="min_navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown submenu">
+                        <a href="/">Home</a>
+
+                        </li>
+                        <li class="dropdown submenu">
+                        <router-link class="nav-link" to="/about">About</router-link>
+
+                        </li>
+                        <li class="dropdown submenu">
+                        <router-link class="nav-link" to="/service">Service</router-link>
+
+                        </li>
+                        <!-- <li><a href="#">Gallery</a></li> -->
+                        <li class="dropdown submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="blog-2.html">Blog-2</a></li>
+                            </ul>
+                        </li>
+                        <li> <router-link class="nav-link" to="/contact">Contact</router-link></li>
+                        <li><a href="#" class="nav_searchFrom"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </div><!-- /.container -->
+    </nav>
+	<!-- End Header_Area -->
+
+    <home-main></home-main>
+
+    <!-- Footer Area -->
+    <footer class="footer_area">
+        <div class="container">
+            <div class="footer_row row">
+                <div class="col-md-3 col-sm-6 footer_about">
+                    <h2>ABOUT OUR COMPANY</h2>
+                    <img src="{{asset("public/asset/images/")}}/footer-logo.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <ul class="socail_icon">
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer_about quick">
+                    <h2>Quick links</h2>
+                    <ul class="quick_link">
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Building Construction</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Home Renovation</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Hardwood Flooring</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Repairing Of Roof</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Commercial Construction</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Concreate Transport</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer_about">
+                    <h2>Twitter Feed</h2>
+                    <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
+                    <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
+                </div>
+                <div class="col-md-3 col-sm-6 footer_about">
+                    <h2>CONTACT US</h2>
+                    <address>
+                        <p>Have questions, comments or just want to say hello:</p>
+                        <ul class="my_address">
+                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>info@thethemspro.com</a></li>
+                            <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>+880 123 456 789</a></li>
+                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>Sector # 10, Road # 05, Plot # 31, Uttara, Dhaka 1230 </span></a></li>
+                        </ul>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="copyright_area">
+            Copyright 2017 All rights reserved. Designed by <a href="https://colorlib.com">Colorlib.</a>
+        </div>
+    </footer>
+    </div>
+    <!-- End Footer Area -->
+    <script src="{{asset("js/app.js")}}"></script>
+    <!-- jQuery JS -->
+    <script src="{{asset("public/asset/js/")}}/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="{{asset("public/asset/js/")}}/bootstrap.min.js"></script>
+    <!-- Animate JS -->
+    <script src="{{asset("public/asset/vendors/")}}/animate/wow.min.js"></script>
+    <!-- Camera Slider -->
+    <script src="{{asset("public/asset/vendors/")}}/camera-slider/jquery.easing.1.3.js"></script>
+    <script src="{{asset("public/asset/vendors/")}}/camera-slider/camera.min.js"></script>
+    <!-- Isotope JS -->
+    <script src="{{asset("public/asset/vendors/")}}/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="{{asset("public/asset/vendors/")}}/isotope/isotope.pkgd.min.js"></script>
+    <!-- Progress JS -->
+    <script src="{{asset("public/asset/vendors/")}}/Counter-Up/jquery.counterup.min.js"></script>
+    <script src="{{asset("public/asset/vendors/")}}/Counter-Up/waypoints.min.js"></script>
+    <!-- Owlcarousel JS -->
+    <script src="{{asset("public/asset/vendors/")}}/owl_carousel/owl.carousel.min.js"></script>
+    <!-- Stellar JS -->
+    <script src="{{asset("public/asset/vendors/")}}/stellar/jquery.stellar.js"></script>
+    <!-- Theme JS -->
+    <script src="{{asset("public/asset/js/")}}/theme.js"></script>
 
 </body>
 </html>
