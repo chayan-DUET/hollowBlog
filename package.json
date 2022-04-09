@@ -22,7 +22,7 @@
     },
     "dependencies": {
         "admin-lte": "^3.0.0-alpha.2",
-        "moment": "^2.23.0",
+        "moment": "^2.29.2",
         "sweetalert2": "^7.32.4",
         "v-markdown-editor": "^1.0.8",
         "vform": "^1.0.0",
